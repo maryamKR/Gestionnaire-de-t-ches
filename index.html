@@ -11,26 +11,40 @@
 </head>
 <style type="text/tailwindcss">
   @theme {
-    --color-pink: #ff1493
+    --color-Tc-pink: #ff1493;
+    --color-Tc-pink-300: #f30083;
+    --color-Tc-gray-400: #39393a
   }
-  body {@apply bg-[#1a1a1a] text-white text-[16px] px-[300px] py-[60px] space-y-15}
+  body {@apply bg-[#1a1a1a] text-gray-200 text-[16px] px-[300px] py-[60px] space-y-15}
+
+  input {@apply h-[70px] w-full px-[12px] outline-1 outline-Tc-gray-400 hover:outline-gray-400 !bg-transparent placeholder:text-lg}
+  input:focus-within {@apply outline-Tc-pink !bg-transparent}
+
+  .li-list { @apply border-b border-b-Tc-gray-400 w-full pb-[20px] flex items-center text-xl}
+
+  .delete { @apply outline-none px-[7px] h-[55px] rounded-md bg-red-700 cursor-pointer ml-auto}
 </style>
 <body>
 
   <div class="space-y-3">
-    <div id="Date_Container" class="space-x-2 text-gray-200 text-md"></div>
+    <div id="Date_Container" class="space-x-2 text-md"></div>
     <h1 class="title text-4xl">Salut, Maryam</h1>
   </div>
 
-  <div class="border border-[#39393a] border-solid w-full h-full p-[50px] flex flex-col items-start space-y-7">
+  <div class="border border-Tc-gray-400 border-solid w-full h-full p-[50px] flex flex-col items-start space-y-8">
 
     <div class="flex gap-7 w-full">
-      <input id="input_todo" class="border border-[#39393a] h-[70px] w-full px-[12px] focus:outline-1 focus:outline-pink" type="text" placeholder="Créer une tâche">
+      <input id="input_todo" type="text" placeholder="Créer une tâche" autocomplete="off">
 
-    <button id="add_todo" class="text-white text-xl outline-none bg-pink px-[15px] h-[70px] rounded-md hover:bg-gray-800 hover:text-white cursor-pointer w-fitt">
+    <button id="add_todo" class="outline-none bg-Tc-pink px-[15px] h-[70px] rounded-md hover:bg-Tc-pink-300 cursor-pointer w-fitt">
       <img src="assets/add_circle_36dp_E3E3E3_FILL0_wght400_GRAD0_opsz40.svg" alt="">
     </button>
-    </div>
+  </div>
+    <ul id="list_todo" class="space-y-5 w-[908px]">
+
+    </ul>
+
+    
   </div>
 
   <script src="script.js"></script>
