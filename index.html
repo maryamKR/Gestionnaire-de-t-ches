@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gestionnaire de Tâches</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+   <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+<style type="text/tailwindcss">
+  @theme {
+    --color-pink: #ff1493
+  }
+  body {@apply bg-[#1a1a1a] text-white text-[16px] px-[300px] py-[60px] space-y-15}
+</style>
+<body>
+
+  <div class="space-y-3">
+    <div id="Date_Container" class="space-x-2 text-gray-200 text-md"></div>
+    <h1 class="title text-4xl">Salut, Maryam</h1>
+  </div>
+
+  <div class="border border-[#39393a] border-solid w-full h-full p-[50px] flex flex-col items-start space-y-7">
+
+    <div class="flex gap-7 w-full">
+      <input id="input_todo" class="border border-[#39393a] h-[70px] w-full px-[12px] focus:outline-1 focus:outline-pink" type="text" placeholder="Créer une tâche">
+
+    <button id="add_todo" class="text-white text-xl outline-none bg-pink px-[15px] h-[70px] rounded-md hover:bg-gray-800 hover:text-white cursor-pointer w-fitt">
+      <img src="assets/add_circle_36dp_E3E3E3_FILL0_wght400_GRAD0_opsz40.svg" alt="">
+    </button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
