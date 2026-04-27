@@ -17,10 +17,12 @@
   }
   body {@apply bg-[#1a1a1a] text-gray-200 text-[16px] px-[300px] py-[60px] space-y-15}
 
-  input {@apply h-[70px] w-full px-[12px] outline-1 outline-Tc-gray-400 hover:outline-gray-400 !bg-transparent placeholder:text-lg}
-  input:focus-within {@apply outline-Tc-pink !bg-transparent}
+  .input_todo {@apply h-[70px] w-full px-[12px] outline-1 outline-Tc-gray-400 hover:outline-gray-400 !bg-transparent placeholder:text-lg}
+  .input_todo:focus-within {@apply outline-Tc-pink !bg-transparent}
 
-  .li-list { @apply border-b border-b-Tc-gray-400 w-full pb-[20px] flex items-center text-xl}
+  .check {@apply w-[24px] h-[24px] appearance-none outline-1 outline-Tc-gray-400 hover:outline-gray-400 cursor-pointer checked:bg-[#23BD33] rounded-full}
+
+  .li-list { @apply space-x-3 border-b border-b-Tc-gray-400 w-full pb-[20px] flex items-center text-xl}
 
   .delete { @apply outline-none px-[7px] h-[55px] rounded-md bg-red-700 cursor-pointer ml-auto}
 </style>
@@ -34,7 +36,7 @@
   <div class="border border-Tc-gray-400 border-solid w-full h-full p-[50px] flex flex-col items-start space-y-8">
 
     <div class="flex gap-7 w-full">
-      <input id="input_todo" type="text" placeholder="Créer une tâche" autocomplete="off">
+      <input id="input_todo" class="input_todo" type="text" placeholder="Créer une tâche" autocomplete="off">
 
     <button id="add_todo" class="outline-none bg-Tc-pink px-[15px] h-[70px] rounded-md hover:bg-Tc-pink-300 cursor-pointer w-fitt">
       <img src="assets/add_circle_36dp_E3E3E3_FILL0_wght400_GRAD0_opsz40.svg" alt="">
