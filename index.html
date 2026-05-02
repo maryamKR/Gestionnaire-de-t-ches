@@ -13,7 +13,8 @@
   @theme {
     --color-Tc-pink: #ff1493;
     --color-Tc-pink-300: #f30083;
-    --color-Tc-gray-400: #39393a
+    --color-Tc-gray-400: #39393a;
+    --color-Tc-gray-600: #222222
   }
   body {@apply bg-[#1a1a1a] text-gray-200 text-[16px] px-[300px] py-[60px] space-y-15}
 
@@ -25,16 +26,28 @@
   .li-list { @apply space-x-3 border-b border-b-Tc-gray-400 w-full pb-[20px] flex items-center text-xl}
 
   .delete { @apply outline-none px-[7px] h-[55px] rounded-md bg-red-700 cursor-pointer ml-auto}
+
+  .btns {@apply text-gray-400 hover:text-white mb-5 pb-[22px] border-b border-b-transparent hover:border-b hover:border-b-white cursor-pointer font-medium }
 </style>
 <body>
 
-  <div class="space-y-3">
-    <div id="Date_Container" class="space-x-2 text-md"></div>
-    <h1 class="title text-4xl">Salut, Maryam</h1>
+  <div class="flex justify-between">
+    <div class="space-y-3">
+      <div id="Date_Container" class="space-x-2 text-md"></div>
+      <h1 class="title text-4xl">Salut, Maryam</h1>
+    </div>
+    <p class="mt-auto bg-Tc-gray-600 text-gray-400 py-[5px] px-[10px] rounded-md"><span>2 </span> non terminées</p>
   </div>
 
-  <div class="border border-Tc-gray-400 border-solid w-full h-full p-[50px] flex flex-col items-start space-y-8">
-
+  <div class="bg-Tc-gray-600 border border-Tc-gray-400 border-solid w-full h-full p-[50px] flex flex-col items-start space-y-8">
+    
+    <div class="space-x-6 w-full relative ">
+      <button class="btns">Toutes</button>
+      <button class="btns">Actives</button>
+      <button class="btns">Terminées</button>
+      <div class="absolute left-0 right-0 h-[1px] w-full bg-Tc-gray-400 bottom-[18px]"></div>
+    </div>
+    
     <div class="flex gap-7 w-full">
       <input id="input_todo" class="input_todo" type="text" placeholder="Créer une tâche" autocomplete="off">
 
